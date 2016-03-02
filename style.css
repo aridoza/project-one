@@ -1,0 +1,36 @@
+body {
+  display:block;
+  background-color: #ccc;
+
+}
+
+h1 {
+  text-align: center;
+  font-family: fantasy;
+}
+
+.player1Image, .player2Image {
+  display: block;
+  position: absolute;
+  width: 60%;
+  height: 50%;
+
+}
+
+
+
+
+.player1Title {
+  position: absolute;
+  display: block;
+  left: 10%;
+  top: 40px;
+
+}
+
+.player2Title {
+  position: absolute;
+  display: block;
+  left: 1000px;
+  top: 50px;
+}
