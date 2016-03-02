@@ -1,6 +1,9 @@
-body {
+.container {
   display:block;
+  position: absolute;
   background-color: #ccc;
+  width: 100%;
+  height: 100%;
 
 }
 
@@ -21,16 +24,20 @@ h1 {
 
 
 .player1Title {
-  position: absolute;
+  position: relative;
   display: block;
-  left: 10%;
+  /*left: 10%;*/
+  float: left;
   top: 40px;
+  left: 100px;
 
 }
 
 .player2Title {
-  position: absolute;
+  position: relative;
   display: block;
-  left: 1000px;
+  /*left: 1000px;*/
+  float: right;
   top: 50px;
+  right: 700px;
 }
