@@ -45,6 +45,38 @@ player2IsDead = false; //if one changes to true, game ends, alert("Player x got 
 //add a character select screen to choose btwn different character images
 //add presidential candidates?
 
+window.onload = function() {
+
+
+
+//Grab attack buttons & do stuff
+var player1LA = document.querySelector('.lightAttackP1');
+var player2LA = document.querySelector('.lightAttackP2');
+player1LA.addEventListener('click', function() {
+  alert("Kirby barely attacks Kermit!");
+});
+player2LA.addEventListener('click', function() {
+  alert("Kermit barely attacks Kirby!");
+});
+
+var player1MA = document.querySelector('.medAttackP1');
+var player2MA = document.querySelector('.medAttackP2');
+player1MA.addEventListener('click', function() {
+  alert("Kirby mediumly attacks Kermit!");
+});
+player2MA.addEventListener('click', function() {
+  alert("Kermit mediumly attacks Kirby!");
+});
+
+var player1HA = document.querySelector('.strongAttackP1');
+var player2HA = document.querySelector('.strongAttackP2');
+player1HA.addEventListener('click', function() {
+  alert("Kirby bitch slaps Kermit!");
+});
+player2HA.addEventListener('click', function() {
+  alert("Kermit bitch slaps Kirby!");
+});
+
 
 //Diceroll function
 var diceValue;
@@ -67,15 +99,6 @@ var diceRoll = function() {
   console.log(diceValue);
 };
 
-player1AttackButton = document.querySelector('.AttackP1');
-player2AttackButton = document.querySelector('.AttackP2');
-player1AttackButton.addEventListener('click', function() {
-  alert("Kirby attacks Kermit!");
-});
-player2AttackButton.addEventListener('click', function() {
-  alert("Kermit attacks Kirby!");
-});
-
 
 
 //Game begins
@@ -87,3 +110,6 @@ while (count1 > 0) {
     alert("Hello!");
   });
 }
+
+
+};
