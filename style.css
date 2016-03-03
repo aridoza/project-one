@@ -42,3 +42,18 @@ h1 {
   top: 50px;
   right: 700px;
 }
+
+.P1Health {
+  position: absolute;
+  text-align:center;
+}
+
+.P2Health {
+  position: absolute;
+  text-align: center;
+}
+
+.Reset {
+  display: block;
+  left: 400px;
+}
