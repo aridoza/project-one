@@ -23,32 +23,32 @@ var button6Press = false;
 
 ////disable p1 buttons/////
   function disableP1Buttons() {
-    button1.disabled = 'true';
-    button2.disabled = 'true';
-    button3.disabled = 'true';
+    button1.disabled = true;
+    button2.disabled = true;
+    button3.disabled = true;
   };
 
 /////disable p2 buttons//////
   function disableP2Buttons() {
-    button4.disabled = 'true';
-    button5.disabled = 'true';
-    button6.disabled = 'true';
+    button4.disabled = true;
+    button5.disabled = true;
+    button6.disabled = true;
   };
 
   ///////enable p1 buttons////////
   function enableP1Buttons() {
-    button1.disabled = 'false';
-    button2.disabled = 'false';
-    button3.disabled = 'false';
+    button1.disabled = false;
+    button2.disabled = false;
+    button3.disabled = false;
   };
 
 
 
   ////////enable p2 buttons////////
   function enableP2Buttons() {
-    button4.disabled = 'false';
-    button5.disabled = 'false';
-    button6.disabled = 'false';
+    button4.disabled = false;
+    button5.disabled = false;
+    button6.disabled = false;
   };
 
 /////trying to attach sound file to attack buttons////////
@@ -80,8 +80,9 @@ button1.addEventListener('click', function() {
   ///trying to work out turns with button presses///
   button1Press = true;
 
-  if (button1Press == true) {
+  if (button1Press = true) {
     disableP1Buttons();
+    enableP2Buttons();
   }
 
 
@@ -102,12 +103,15 @@ button1.addEventListener('click', function() {
   var resetButton = document.createElement('button'); //resetbutton code start
   resetButton.setAttribute('type', 'button');
   resetButton.innerText = 'New Slapfest?'
+
   resetButton.addEventListener('click', function() {
     window.location.reload(); //found at http://stackoverflow.com/questions/5294842/refresh-a-page-using-javascript-or-html
   })
+
   var putButton = document.querySelector('.health2');
   putButton.appendChild(resetButton); //resetButton code ends; remove/recode if something breaks
 };
+
   button1.removeEventListener('click', function(){
 
     });
@@ -122,6 +126,12 @@ console.log(button2);
 
 //NORMAL ATTACK
 button2.addEventListener('click', function() {
+  button2Press = true;
+
+  if (button2Press = true) {
+    disableP1Buttons();
+    enableP2Buttons();
+  }
   var health2 = document.querySelector('.health2');
   var diceValue = Math.random();
   if (diceValue <= 0.70) {
@@ -154,6 +164,12 @@ console.log(button2);
 
 //STRONG ATTACK
 button3.addEventListener('click', function() {
+  button3Press = true;
+
+  if (button3Press = true) {
+    disableP1Buttons();
+    enableP2Buttons();
+  }
   var health2 = document.querySelector('.health2');
   var diceValue = Math.random();
   if (diceValue >= 0.65) {
@@ -206,6 +222,12 @@ health2.innerText = health2Counter;
 
 //LIGHT ATTACK
 button4.addEventListener('click', function() {
+  button4Press = true;
+
+  if (button4Press = true) {
+    disableP2Buttons();
+    enableP1Buttons();
+  }
   // alert("Why'd you click me?");
   var health1 = document.querySelector('.health1');
   // healthCounter = healthCounter - 3; //every time user clicks, health amt updates as 3 less; change -3 to -(somevariable from diceroll value)
@@ -242,6 +264,12 @@ console.log(button2);
 
 //NORMAL ATTACK
 button5.addEventListener('click', function() {
+  button5Press = true;
+
+  if (button5Press = true) {
+    disableP2Buttons();
+    enableP1Buttons();
+  }
   //trying to add playSound
     function playSound(file) {
       var audioElement = document.createElement('audio');
@@ -281,6 +309,12 @@ console.log(button2);
 
 //STRONG ATTACK
 button6.addEventListener('click', function() {
+  button6Press = true;
+
+  if (button6Press = true) {
+    disableP2Buttons();
+    enableP1Buttons();
+  }
   var health2 = document.querySelector('.health1');
   var diceValue = Math.random();
   if (diceValue >= 0.65) {

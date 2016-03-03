@@ -39,10 +39,12 @@
 
 ////recent issues:
 //1. getting p1, p2 attack buttons to have no input until after
-//next player attacks
+//next player attacks DONE
 //2. adding sound clips to button clicks
 //3. moving reset game button to top center of screen
-//4. 
+//4.
+
+/////ONCE EVERYTHING WORKS: MAKE YOUR CODE NEAT WITH INDENTS, etc.////
 
 
 
