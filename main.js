@@ -33,8 +33,16 @@
 // overwrite player image with dead image (skullface?)
 // else, console.log player health remaining
 // keep playing!
+//wait until player 2 attacks, then P1 can attack again
 //
 // repeat for player 2
+
+////recent issues:
+//1. getting p1, p2 attack buttons to have no input until after
+//next player attacks
+//2. adding sound clips to button clicks
+//3. moving reset game button to top center of screen
+//4. 
 
 
 
@@ -105,12 +113,10 @@ player1LA.addEventListener('click', function() {
   alert("Player 1 slapped em silly!");
   alert("Game over!");
   health2.innerText = "You cant HANDLE the slaps!";
-  var grabReset = document.querySelector('.Reset');
+  // var grabReset = document.querySelector('h1');
   var resetButton = document.createElement('button'); //resetbutton code start
   resetButton.setAttribute('type', 'button');
-  resetButton.innerText = 'New Slapfest?'
-  grabReset.appendChild(resetButton);
-  document.appendChild(grabReset);
+  resetButton.innerText = 'New Slapfest?';
   resetButton.addEventListener('click', function() {
     window.location.reload(); //found at http://stackoverflow.com/questions/5294842/refresh-a-page-using-javascript-or-html
   })

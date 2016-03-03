@@ -6,11 +6,59 @@ var healthCounter;
 
 window.onload = function() {
 
+var button1 = document.querySelector('.Haha');
+var button2 = document.querySelector('.Baba');
+var button3 = document.querySelector('.Jaja');
+var button4 = document.querySelector('.P2L');
+var button5 = document.querySelector('.P2M');
+var button6 = document.querySelector('.P2H');
+//////////button presses/////////
+var button1Press = false;
+var button2Press = false;
+var button3Press = false;
+var button4Press = false;
+var button5Press = false;
+var button6Press = false;
+
+
+////disable p1 buttons/////
+  function disableP1Buttons() {
+    button1.disabled = 'true';
+    button2.disabled = 'true';
+    button3.disabled = 'true';
+  };
+
+/////disable p2 buttons//////
+  function disableP2Buttons() {
+    button4.disabled = 'true';
+    button5.disabled = 'true';
+    button6.disabled = 'true';
+  };
+
+  ///////enable p1 buttons////////
+  function enableP1Buttons() {
+    button1.disabled = 'false';
+    button2.disabled = 'false';
+    button3.disabled = 'false';
+  };
+
+
+
+  ////////enable p2 buttons////////
+  function enableP2Buttons() {
+    button4.disabled = 'false';
+    button5.disabled = 'false';
+    button6.disabled = 'false';
+  };
+
+/////trying to attach sound file to attack buttons////////
   function playSound(file) {
     var audioElement = document.createElement('audio');
     audioElement.setAttribute('src', file);
     audioElement.play();
-  }
+  };
+
+///////main content//////////
 
 var health1Counter = 100;
 var health2Counter = 100;
@@ -22,12 +70,19 @@ health1.innerText = health1Counter;
 var health2 = document.querySelector('.health2');
 health2.innerText = health2Counter;
 
+disableP2Buttons();
 
 // if (healthCounter >= 0) { //wrapped ALL 3 attack functions in this loop
 
 //LIGHT ATTACK
 button1.addEventListener('click', function() {
   // alert("Why'd you click me?");
+  ///trying to work out turns with button presses///
+  button1Press = true;
+
+  if (button1Press == true) {
+    disableP1Buttons();
+  }
 
 
   var health2 = document.querySelector('.health2');
@@ -38,7 +93,7 @@ button1.addEventListener('click', function() {
     health2Counter = health2Counter - 5;
     health2.innerText = health2Counter;
   } else {
-    alert("Miss!")
+    alert("Miss!");
   }
   if (health2Counter <= 0) { //endgame code, put into other 2 attack buttons
   alert("Player 1 slapped em silly!");
@@ -54,9 +109,11 @@ button1.addEventListener('click', function() {
   putButton.appendChild(resetButton); //resetButton code ends; remove/recode if something breaks
 };
   button1.removeEventListener('click', function(){
+
     });
 
 });
+
 
 //trying to tie heavy attack hit success to random number
 //Works! for med/light attacks: lower the >= diceValue for higher success rate
@@ -124,6 +181,7 @@ button3.addEventListener('click', function() {
 });
 
 
+
 ///////END PLAYER 1 ATTACKS ///////////////
 ///////////////////////////////////////////
 ///////////////////////////////////////////
@@ -133,6 +191,7 @@ button3.addEventListener('click', function() {
 
 
 /////////PLAYER 2 ATTACKS ////////////////
+
 
 
 var button4 = document.querySelector('.P2L');
@@ -247,6 +306,9 @@ button6.addEventListener('click', function() {
     });
 
 });
+
+
+
 
 
 
