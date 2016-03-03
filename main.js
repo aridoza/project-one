@@ -85,6 +85,43 @@ alert("Ready...");
 alert("FIGHT!!!!!!");
 ///////////////////////////////////////
 
+var player1LAPress = false;
+var player1MAPress = false;
+var player1HAPress = false;
+var player2LAPress = false;
+var player2MAPress = false;
+var player2HAPress = false;
+
+
+////disable p1 buttons/////
+  function disableP1Buttons() {
+    player1LA.disabled = true;
+    player1MA.disabled = true;
+    player1HA.disabled = true;
+  };
+
+/////disable p2 buttons//////
+  function disableP2Buttons() {
+    player2LA.disabled = true;
+    player2MA.disabled = true;
+    player2HA.disabled = true;
+  };
+
+  ///////enable p1 buttons////////
+  function enableP1Buttons() {
+    player1LA.disabled = false;
+    player1MA.disabled = false;
+    player1HA.disabled = false;
+  };
+
+
+
+  ////////enable p2 buttons////////
+  function enableP2Buttons() {
+    player2LA.disabled = false;
+    player2MA.disabled = false;
+    player2HA.disabled = false;
+  };
 
 
 
@@ -101,6 +138,12 @@ var player2LA = document.querySelector('.lightAttackP2');
 ////////////////////P1 LIGHT ATTACK///////////////////////
 player1LA.addEventListener('click', function() {
   // alert("Kirby barely attacks Kermit!");
+  player1LAPress = true;
+
+  if (player1LAPress = true) {
+    disableP1Buttons();
+    enableP2Buttons();
+  }
   var health2 = document.querySelector('.P2Health');
   // healthCounter = healthCounter - 3; //every time user clicks, health amt updates as 3 less; change -3 to -(somevariable from diceroll value)
   // health.innerText = healthCounter;
@@ -131,6 +174,12 @@ player1LA.addEventListener('click', function() {
 
 ///////////////////P2 LIGHT ATTACK//////////////////////
 player2LA.addEventListener('click', function() {
+  player2LAPress = true;
+
+  if (player2LAPress = true) {
+    disableP2Buttons();
+    enableP1Buttons();
+  }
   // alert("Kermit barely attacks Kirby!");
   var health1 = document.querySelector('.P1Health');
   // healthCounter = healthCounter - 3; //every time user clicks, health amt updates as 3 less; change -3 to -(somevariable from diceroll value)
@@ -169,6 +218,12 @@ var player2MA = document.querySelector('.medAttackP2');
 
 ////////////////////////P1 NORMAL ATTACK////////////////////
 player1MA.addEventListener('click', function() {
+  player1MAPress = true;
+
+  if (player1MAPress = true) {
+    disableP1Buttons();
+    enableP2Buttons();
+  }
   // alert("Kirby mediumly attacks Kermit!");
   var health2 = document.querySelector('.P2Health');
   // healthCounter = healthCounter - 3; //every time user clicks, health amt updates as 3 less; change -3 to -(somevariable from diceroll value)
@@ -193,12 +248,18 @@ player1MA.addEventListener('click', function() {
   var putButton = document.querySelector('.P2Health');
   putButton.appendChild(resetButton); //resetButton code ends; remove/recode if something breaks
 };
-  player1LA.removeEventListener('click', function(){
+  player1MA.removeEventListener('click', function(){
     });
 });
 
 /////////////////////P2 NORMAL ATTACK///////////////////
 player2MA.addEventListener('click', function() {
+  player2MAPress = true;
+
+  if (player2MAPress = true) {
+    disableP2Buttons();
+    enableP1Buttons();
+  }
   // alert("Kermit mediumly attacks Kirby!");
   var health1 = document.querySelector('.P1Health');
   // healthCounter = healthCounter - 3; //every time user clicks, health amt updates as 3 less; change -3 to -(somevariable from diceroll value)
@@ -235,6 +296,12 @@ var player2HA = document.querySelector('.strongAttackP2');
 
 /////////////////P1 STRONG ATTACK////////////////////
 player1HA.addEventListener('click', function() {
+  player1HAPress = true;
+
+  if (player1HAPress = true) {
+    disableP1Buttons();
+    enableP2Buttons();
+  }
   // alert("Kirby bitch slaps Kermit!");
   var health2 = document.querySelector('.P2Health');
   // healthCounter = healthCounter - 3; //every time user clicks, health amt updates as 3 less; change -3 to -(somevariable from diceroll value)
@@ -265,6 +332,12 @@ player1HA.addEventListener('click', function() {
 
 ////////////P2 STRONG ATTACK/////////////////////////
 player2HA.addEventListener('click', function() {
+  player2HAPress = true;
+
+  if (player2HAPress = true) {
+    disableP2Buttons();
+    enableP1Buttons();
+  }
   // alert("Kermit bitch slaps Kirby!");
   var health1 = document.querySelector('.P1Health');
   // healthCounter = healthCounter - 3; //every time user clicks, health amt updates as 3 less; change -3 to -(somevariable from diceroll value)
