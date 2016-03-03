@@ -1,11 +1,12 @@
 //variables
-player1;
-player2;
-diceRollValue;
-Player1Health = 30;
-Player2Health= 30;
-player1IsDead = false;
-player2IsDead = false; //if one changes to true, game ends, alert("Player x got slapped senseless!")
+// var player1 = function() {
+//   prompt("Enter P1");}
+// player2 = prompt("Enter P2");
+// diceRollValue;
+// Player1Health = 30;
+// Player2Health= 30;
+// player1IsDead = false;
+// player2IsDead = false; //if one changes to true, game ends, alert("Player x got slapped senseless!")
 
 
 
@@ -48,9 +49,26 @@ player2IsDead = false; //if one changes to true, game ends, alert("Player x got 
 window.onload = function() {
 
 
+  // player1;
+  // player2;
+  // diceRollValue;
+  var Player1Health = 30;
+  var Player2Health= 30;
+  var p1HealthDiv = document.querySelector('.P1Health');
+  p1HealthDiv.innerText = Player1Health;
+  var p2HealthDiv = document.querySelector('.P2Health');
+  p2HealthDiv.innerText = Player2Health;
+  player1IsDead = false;
+  player2IsDead = false; //if one changes to true, game ends, alert("Player x got slapped senseless!")
+
+
+
+
+
+
 
 //Grab attack buttons & do stuff
-var player1LA = document.querySelector('.lightAttackP1');
+var player1LA = document.querySelector('.lightAttackP1'); //player1LA => player 1 light attack (higher hit chance)
 var player2LA = document.querySelector('.lightAttackP2');
 player1LA.addEventListener('click', function() {
   alert("Kirby barely attacks Kermit!");
@@ -59,7 +77,7 @@ player2LA.addEventListener('click', function() {
   alert("Kermit barely attacks Kirby!");
 });
 
-var player1MA = document.querySelector('.medAttackP1');
+var player1MA = document.querySelector('.medAttackP1'); //MA = medium attack (avg hit chance)
 var player2MA = document.querySelector('.medAttackP2');
 player1MA.addEventListener('click', function() {
   alert("Kirby mediumly attacks Kermit!");
@@ -68,7 +86,7 @@ player2MA.addEventListener('click', function() {
   alert("Kermit mediumly attacks Kirby!");
 });
 
-var player1HA = document.querySelector('.strongAttackP1');
+var player1HA = document.querySelector('.strongAttackP1'); //heavy attack (has lower chance in dice roll. if roll less than certain value it misses)
 var player2HA = document.querySelector('.strongAttackP2');
 player1HA.addEventListener('click', function() {
   alert("Kirby bitch slaps Kermit!");
@@ -102,14 +120,15 @@ var diceRoll = function() {
 
 
 //Game begins
-var count1 = 30;
-var count2 = 30;
-while (count1 > 0) {
-  player1AttackButton = document.getElementById('.AttackP1');
-  player1Click = player1AttackButton.addEventListener('click', function() {
-    alert("Hello!");
-  });
-}
+//trying out while loop tied to player health
+// var count1 = 30;
+// var count2 = 30;
+// while (count1 > 0) {
+//   player1AttackButton = document.getElementById('.AttackP1');
+//   player1Click = player1AttackButton.addEventListener('click', function() {
+//     alert("Hello!");
+//   });
+// }
 
 
 };
