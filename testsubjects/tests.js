@@ -15,14 +15,15 @@ health.innerText = healthCounter;
 
 // if (healthCounter >= 0) { //wrapped ALL 3 attack functions in this loop
 
+//LIGHT ATTACK
 button1.addEventListener('click', function() {
   // alert("Why'd you click me?");
   var health = document.querySelector('.health');
   // healthCounter = healthCounter - 3; //every time user clicks, health amt updates as 3 less; change -3 to -(somevariable from diceroll value)
   // health.innerText = healthCounter;
   var diceValue = Math.random();
-  if (diceValue >= 0.30) {
-    healthCounter = healthCounter - 1;
+  if (diceValue <= 0.90) {
+    healthCounter = healthCounter - 5;
     health.innerText = healthCounter;
   } else {
     alert("Miss!")
@@ -42,7 +43,7 @@ button1.addEventListener('click', function() {
 };
   button1.removeEventListener('click', function(){
     });
-  
+
 });
 
 //trying to tie heavy attack hit success to random number
@@ -50,11 +51,12 @@ button1.addEventListener('click', function() {
 var button2 = document.querySelector('.Baba');
 console.log(button2);
 
+//NORMAL ATTACK
 button2.addEventListener('click', function() {
   var health = document.querySelector('.health');
   var diceValue = Math.random();
-  if (diceValue >= 0.35) {
-    healthCounter = healthCounter - 3;
+  if (diceValue <= 0.70) {
+    healthCounter = healthCounter - 10;
     health.innerText = healthCounter;
   } else {
     alert("Miss!");
@@ -81,11 +83,12 @@ button2.addEventListener('click', function() {
 var button3 = document.querySelector('.Jaja');
 console.log(button2);
 
+//STRONG ATTACK
 button3.addEventListener('click', function() {
   var health = document.querySelector('.health');
   var diceValue = Math.random();
   if (diceValue >= 0.65) {
-    healthCounter = healthCounter - 5;
+    healthCounter = healthCounter - 20;
     health.innerText = healthCounter;
   } else {
     alert("Miss!");
@@ -129,7 +132,25 @@ button3.addEventListener('click', function() {
 //has to create new button after health is <= 0, then attach function to it to refresh the page
 //probably best to put inside each attack button's code in case game ends when that button is pushed
 
-var resetButton = document.createElement('button');
-resetButton.setAttribute('type', 'button');
-var putButton = document.querySelector('.health');
-putButton.appendChild(resetButton);
+//just reset button
+// var resetButton = document.createElement('button');
+// resetButton.setAttribute('type', 'button');
+// var putButton = document.querySelector('.health');
+// putButton.appendChild(resetButton);
+
+//full reset button code with page refresh
+// if (healthCounter <= 0) { //endgame code, put into other 2 attack buttons
+// alert("Player 1 slapped em silly!");
+// alert("Game over!");
+// health.innerText = "You cant HANDLE the slaps";
+// var resetButton = document.createElement('button'); //resetbutton code start
+// resetButton.setAttribute('type', 'button');
+// resetButton.innerText = 'New Slapfest?'
+// resetButton.addEventListener('click', function() {
+//   window.location.reload(); //found at http://stackoverflow.com/questions/5294842/refresh-a-page-using-javascript-or-html
+// })
+// var putButton = document.querySelector('.health');
+// putButton.appendChild(resetButton); //resetButton code ends; remove/recode if something breaks
+// };
+// button2.removeEventListener('click', function(){
+//   });

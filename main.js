@@ -21,11 +21,11 @@
 
 //kirby vs kermit: kirby always ready to attack, but kermit can be super smug img in beginning, then change to more worried when closer to death
 //
-// while player health is greater than Zero
-// user clicks on button
-// roll dice
-// get dice value
-// dice value = attack number (6 is a miss, dmg = 0)
+// while player health is greater than Zero DONE
+// user clicks on button DONE (try to map to key presses instead of click)
+// roll dice - got into each attack function to return success rate of attack
+// get dice value - tied to attack
+// dice value = attack number (6 is a miss, dmg = 0) - 3 attacks, 
 // subtract attack number from player health
 // if player health <= 0 at this point:
 // playerisdead changed to true;
