@@ -138,6 +138,7 @@ var player2LA = document.querySelector('.lightAttackP2');
 ////////////////////P1 LIGHT ATTACK///////////////////////
 player1LA.addEventListener('click', function() {
   // alert("Kirby barely attacks Kermit!");
+
   player1LAPress = true;
 
   if (player1LAPress = true) {
@@ -149,6 +150,9 @@ player1LA.addEventListener('click', function() {
   // health.innerText = healthCounter;
   var diceValue = Math.random();
   if (diceValue <= 0.90) {
+    var audio = new Audio('1_person_cheering-Jett_Rifkin-1851518140.mp3');
+    audio.play();
+
     Player2Health = Player2Health - 5;
     health2.innerText = Player2Health;
   } else {
@@ -368,38 +372,45 @@ player2HA.addEventListener('click', function() {
 
 
 //Diceroll function
-var diceValue;
-var diceRoll = function() {
-  var roll = Math.random();
-  var diceValue = 0;
-  if (roll <= 0.17) {
-    diceValue = 1;
-  } else if (roll <= 0.33) {
-    diceValue = 2;
-  } else if (roll <= 0.50) {
-    diceValue = 3;
-  } else if (roll <= 0.67) {
-    diceValue = 4;
-  } else if (roll <= 0.84) {
-    diceValue = 5;
-  } else if (roll <= 1) {
-    diceValue = 6;
-  }
-  console.log(diceValue);
-};
+// var diceValue;
+// var diceRoll = function() {
+//   var roll = Math.random();
+//   var diceValue = 0;
+//   if (roll <= 0.17) {
+//     diceValue = 1;
+//   } else if (roll <= 0.33) {
+//     diceValue = 2;
+//   } else if (roll <= 0.50) {
+//     diceValue = 3;
+//   } else if (roll <= 0.67) {
+//     diceValue = 4;
+//   } else if (roll <= 0.84) {
+//     diceValue = 5;
+//   } else if (roll <= 1) {
+//     diceValue = 6;
+//   }
+//   console.log(diceValue);
+// }; UNNECESSARY, just worked into each attack. Maybe retry for similar
+//                  game in future to use less code?
 
 
 
-//Game begins
-//trying out while loop tied to player health
-// var count1 = 30;
-// var count2 = 30;
-// while (count1 > 0) {
-//   player1AttackButton = document.getElementById('.AttackP1');
-//   player1Click = player1AttackButton.addEventListener('click', function() {
-//     alert("Hello!");
-//   });
-// }
 
 
-};
+}; //end of window onload
+
+////turn functions: set all button presses to false, then
+////as each one is pressed, turns off all 3 for that player, then
+////enables the 3 for second player
+
+
+//changing character images
+//      setTimeout(function() {
+//        varname.innerHTML="";
+//       }, 1000);
+
+
+////CITATIONS
+//soundbible.com
+//stackoverflow.com
+//

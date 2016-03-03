@@ -91,9 +91,14 @@ button1.addEventListener('click', function() {
   // health.innerText = healthCounter;
   var diceValue = Math.random();
   if (diceValue <= 0.90) {
+    var audio = new Audio('http://soundbible.com/grab.php?id=2047&type=mp3');
+    audio.play();
+
     health2Counter = health2Counter - 5;
     health2.innerText = health2Counter;
   } else {
+    var audio = new Audio('');
+    audio.play();
     alert("Miss!");
   }
   if (health2Counter <= 0) { //endgame code, put into other 2 attack buttons
@@ -135,9 +140,14 @@ button2.addEventListener('click', function() {
   var health2 = document.querySelector('.health2');
   var diceValue = Math.random();
   if (diceValue <= 0.70) {
+    var audio = new Audio('http://soundbible.com/grab.php?id=1418&type=mp3');
+    audio.play();
+
     health2Counter = health2Counter - 10;
     health2.innerText = health2Counter;
   } else {
+    var audio = new Audio('');
+    audio.play();
     alert("Miss!");
   }
     if (health2Counter <= 0) { //endgame code, put into other 2 attack buttons
@@ -173,9 +183,14 @@ button3.addEventListener('click', function() {
   var health2 = document.querySelector('.health2');
   var diceValue = Math.random();
   if (diceValue >= 0.65) {
+    var audio = new Audio('http://soundbible.com/grab.php?id=1948&type=mp3');
+    audio.play();
+
     health2Counter = health2Counter - 20;
     health2.innerText = health2Counter;
   } else {
+    var audio = new Audio('');
+    audio.play();
     alert("Miss!");
   }
   if (health2Counter <= 0) { //endgame code, put into other 2 attack buttons
@@ -234,9 +249,14 @@ button4.addEventListener('click', function() {
   // health.innerText = healthCounter;
   var diceValue = Math.random();
   if (diceValue <= 0.90) {
+    var audio = new Audio('http://soundbible.com/grab.php?id=2047&type=mp3');
+    audio.play();
+
     health1Counter = health1Counter - 5;
     health1.innerText = health1Counter;
   } else {
+    var audio = new Audio('');
+    audio.play();
     alert("Miss!")
   }
   if (health1Counter <= 0) { //endgame code, put into other 2 attack buttons
@@ -280,9 +300,14 @@ button5.addEventListener('click', function() {
   var health1 = document.querySelector('.health1');
   var diceValue = Math.random();
   if (diceValue <= 0.70) {
+    var audio = new Audio('http://soundbible.com/grab.php?id=1418&type=mp3');
+    audio.play();
+
     health1Counter = health1Counter - 10;
     health1.innerText = health1Counter;
   } else {
+    var audio = new Audio('');
+    audio.play();
     alert("Miss!");
   }
     if (health1Counter <= 0) { //endgame code, put into other 2 attack buttons
@@ -318,9 +343,14 @@ button6.addEventListener('click', function() {
   var health2 = document.querySelector('.health1');
   var diceValue = Math.random();
   if (diceValue >= 0.65) {
+    var audio = new Audio('http://soundbible.com/grab.php?id=1948&type=mp3');
+    audio.play();
+
     health1Counter = health1Counter - 20;
     health1.innerText = health1Counter;
   } else {
+    var audio = new Audio('');
+    audio.play();
     alert("Miss!");
   }
   if (health1Counter <= 0) { //endgame code, put into other 2 attack buttons
