@@ -97,14 +97,16 @@ button1.addEventListener('click', function() {
     health2Counter = health2Counter - 5;
     health2.innerText = health2Counter;
   } else {
-    var audio = new Audio('');
+    var audio = new Audio('http://soundbible.com/grab.php?id=2068&type=mp3');
     audio.play();
-    alert("Miss!");
+    // alert("Miss!");
   }
   if (health2Counter <= 0) { //endgame code, put into other 2 attack buttons
-  alert("Player 1 slapped em silly!");
+    var audio = new Audio('http://soundbible.com/grab.php?id=2045&type=mp3');
+    audio.play();
+  // alert("Player 1 slapped em silly!");
   alert("Game over!");
-  health2.innerText = "You cant HANDLE the slaps";
+  health2.innerText = "You cant HANDLE the slaps!";
   var resetButton = document.createElement('button'); //resetbutton code start
   resetButton.setAttribute('type', 'button');
   resetButton.innerText = 'New Slapfest?'
@@ -146,9 +148,9 @@ button2.addEventListener('click', function() {
     health2Counter = health2Counter - 10;
     health2.innerText = health2Counter;
   } else {
-    var audio = new Audio('');
+    var audio = new Audio('http://soundbible.com/grab.php?id=2068&type=mp3');
     audio.play();
-    alert("Miss!");
+    // alert("Miss!");
   }
     if (health2Counter <= 0) { //endgame code, put into other 2 attack buttons
     alert("Player 1 slapped em silly!");
@@ -189,9 +191,9 @@ button3.addEventListener('click', function() {
     health2Counter = health2Counter - 20;
     health2.innerText = health2Counter;
   } else {
-    var audio = new Audio('');
+    var audio = new Audio('http://soundbible.com/grab.php?id=2068&type=mp3');
     audio.play();
-    alert("Miss!");
+    // alert("Miss!");
   }
   if (health2Counter <= 0) { //endgame code, put into other 2 attack buttons
   alert("Player 1 slapped em silly!");
@@ -255,9 +257,9 @@ button4.addEventListener('click', function() {
     health1Counter = health1Counter - 5;
     health1.innerText = health1Counter;
   } else {
-    var audio = new Audio('');
+    var audio = new Audio('http://soundbible.com/grab.php?id=2068&type=mp3');
     audio.play();
-    alert("Miss!")
+    // alert("Miss!");
   }
   if (health1Counter <= 0) { //endgame code, put into other 2 attack buttons
   alert("Player 1 slapped em silly!");
@@ -306,9 +308,9 @@ button5.addEventListener('click', function() {
     health1Counter = health1Counter - 10;
     health1.innerText = health1Counter;
   } else {
-    var audio = new Audio('');
+    var audio = new Audio('http://soundbible.com/grab.php?id=2068&type=mp3');
     audio.play();
-    alert("Miss!");
+    // alert("Miss!");
   }
     if (health1Counter <= 0) { //endgame code, put into other 2 attack buttons
     alert("Player 2 slapped em silly!");
@@ -349,9 +351,9 @@ button6.addEventListener('click', function() {
     health1Counter = health1Counter - 20;
     health1.innerText = health1Counter;
   } else {
-    var audio = new Audio('');
+    var audio = new Audio('http://soundbible.com/grab.php?id=2068&type=mp3');
     audio.play();
-    alert("Miss!");
+    // alert("Miss!");
   }
   if (health1Counter <= 0) { //endgame code, put into other 2 attack buttons
   alert("Player 2 slapped em silly!");

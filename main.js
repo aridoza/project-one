@@ -40,7 +40,7 @@
 ////recent issues:
 //1. getting p1, p2 attack buttons to have no input until after
 //next player attacks DONE
-//2. adding sound clips to button clicks
+//2. adding sound clips to button clicks DONE
 //3. moving reset game button to top center of screen
 //4.
 
@@ -70,6 +70,9 @@ window.onload = function() {
   health2.innerText = Player2Health;
   player1IsDead = false;
   player2IsDead = false; //if one changes to true, game ends, alert("Player x got slapped senseless!")
+
+  healthbar1 = document.querySelector('.healthbarP1');
+  healthbar2 = document.querySelector('.healthbarP2');
 
 
 ///////getting player name////////////
@@ -150,13 +153,15 @@ player1LA.addEventListener('click', function() {
   // health.innerText = healthCounter;
   var diceValue = Math.random();
   if (diceValue <= 0.90) {
-    var audio = new Audio('1_person_cheering-Jett_Rifkin-1851518140.mp3');
+    var audio = new Audio('http://soundbible.com/grab.php?id=2047&type=mp3');
     audio.play();
 
     Player2Health = Player2Health - 5;
     health2.innerText = Player2Health;
   } else {
-    alert("Miss!")
+    var audio = new Audio('http://soundbible.com/grab.php?id=2068&type=mp3');
+    audio.play();
+    // alert("Miss!")
   }
   if (Player2Health <= 0) { //endgame code, put into other 2 attack buttons
   alert("Player 1 slapped em silly!");
@@ -190,12 +195,18 @@ player2LA.addEventListener('click', function() {
   // health.innerText = healthCounter;
   var diceValue = Math.random();
   if (diceValue <= 0.90) {
+    var audio = new Audio('http://soundbible.com/grab.php?id=2047&type=mp3');
+    audio.play();
     Player1Health = Player1Health - 5;
     health1.innerText = Player1Health;
   } else {
-    alert("Miss!")
+    var audio = new Audio('http://soundbible.com/grab.php?id=2068&type=mp3');
+    audio.play();
+    // alert("Miss!")
   }
   if (Player1Health <= 0) { //endgame code, put into other 2 attack buttons
+    var audio = new Audio('http://soundbible.com/grab.php?id=2045&type=mp3');
+    audio.play();
   alert("Player 2 slapped em silly!");
   alert("Game over!");
   health1.innerText = "You cant HANDLE the slaps";
@@ -234,10 +245,14 @@ player1MA.addEventListener('click', function() {
   // health.innerText = healthCounter;
   var diceValue = Math.random();
   if (diceValue <= 0.70) {
+    var audio = new Audio('http://soundbible.com/grab.php?id=1418&type=mp3');
+    audio.play();
     Player2Health = Player2Health - 10;
     health2.innerText = Player2Health;
   } else {
-    alert("Miss!")
+    var audio = new Audio('http://soundbible.com/grab.php?id=2068&type=mp3');
+    audio.play();
+    // alert("Miss!")
   }
   if (Player2Health <= 0) { //endgame code, put into other 2 attack buttons
   alert("Player 1 slapped em silly!");
@@ -270,10 +285,14 @@ player2MA.addEventListener('click', function() {
   // health.innerText = healthCounter;
   var diceValue = Math.random();
   if (diceValue <= 0.70) {
+    var audio = new Audio('http://soundbible.com/grab.php?id=1418&type=mp3');
+    audio.play();
     Player1Health = Player1Health - 10;
     health1.innerText = Player1Health;
   } else {
-    alert("Miss!")
+    var audio = new Audio('http://soundbible.com/grab.php?id=2068&type=mp3');
+    audio.play();
+    // alert("Miss!")
   }
   if (Player1Health <= 0) { //endgame code, put into other 2 attack buttons
   alert("Player 2 slapped em silly!");
@@ -312,10 +331,14 @@ player1HA.addEventListener('click', function() {
   // health.innerText = healthCounter;
   var diceValue = Math.random();
   if (diceValue >= 0.65) {
+    var audio = new Audio('http://soundbible.com/grab.php?id=1948&type=mp3');
+    audio.play();
     Player2Health = Player2Health - 20;
     health2.innerText = Player2Health;
   } else {
-    alert("Miss!")
+    var audio = new Audio('http://soundbible.com/grab.php?id=2068&type=mp3');
+    audio.play();
+    // alert("Miss!")
   }
   if (Player2Health <= 0) { //endgame code, put into other 2 attack buttons
   alert("Player 1 slapped em silly!");
@@ -348,10 +371,14 @@ player2HA.addEventListener('click', function() {
   // health.innerText = healthCounter;
   var diceValue = Math.random();
   if (diceValue >= 0.65) {
+    var audio = new Audio('http://soundbible.com/grab.php?id=1948&type=mp3');
+    audio.play();
     Player1Health = Player1Health - 20;
     health1.innerText = Player1Health;
   } else {
-    alert("Miss!")
+    var audio = new Audio('http://soundbible.com/grab.php?id=2068&type=mp3');
+    audio.play();
+    // alert("Miss!")
   }
   if (Player1Health <= 0) { //endgame code, put into other 2 attack buttons
   alert("Player 2 slapped em silly!");
@@ -412,5 +439,5 @@ player2HA.addEventListener('click', function() {
 
 ////CITATIONS
 //soundbible.com
-//stackoverflow.com
+//stackoverflow.com - putting audio on button press
 //
