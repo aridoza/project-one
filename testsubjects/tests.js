@@ -27,6 +27,35 @@ charButton.addEventListener('click', function() {
 });
 
 
+//////GET CHAR NAMES//////
+var player1 = document.createElement('h3');
+player1.innerText = "Player 1:"
+var p1Name = document.createElement('input');
+var p1NameSubmit = document.createElement('input');
+
+p1Name.setAttribute('type', 'text');
+p1NameSubmit.setAttribute('type', 'submit');
+var p1Div = document.querySelector('.p1Name');
+p1Div.appendChild(player1);
+p1Div.appendChild(p1Name);
+p1Div.appendChild(p1NameSubmit);
+
+// if (p1Name.value > 1) {
+p1NameSubmit.addEventListener('click', function() {
+  p1Name.style.visibility = 'hidden';
+  p1NameSubmit.style.visibility = 'hidden';
+  player1.style.visibility = 'hidden';
+  var p1NameContent = p1Name.value;
+  var displayP1Name = document.createElement('h3');
+  displayP1Name.innerText = p1NameContent;
+  p1Div.appendChild(displayP1Name);
+});
+// } else {
+//
+// }
+
+
+
 
 
 var button1 = document.querySelector('.Haha');

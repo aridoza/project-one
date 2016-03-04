@@ -55,7 +55,7 @@
 //6. add input box type text, then grab its .value and it equals the
 //inner text of something next to the name
 //7. have input textbox, now make it so that text entered (.value of box)
-//gets added as name of player (like how prompt was working) 
+//gets added as name of player (like how prompt was working)
 
 
 
@@ -63,8 +63,10 @@
 /////ONCE EVERYTHING WORKS: MAKE YOUR CODE NEAT WITH INDENTS, etc.////
 
 
+window.onload = function() {
 
 
+////GET PLAYER NAMES//////
 
 
 
@@ -72,7 +74,6 @@
 //add a character select screen to choose btwn different character images
 //add presidential candidates?
 
-window.onload = function() {
 
   var titleScreen = document.querySelector('.titleScreen');
   var charSelectScreen = document.querySelector('.characterSelectScreen');
@@ -94,6 +95,12 @@ window.onload = function() {
     charSelectScreen.style.visibility = 'hidden';
   });
 
+//remove container of content after button click:
+  // middle.removeChild(enterName);
+  // user.removeChild(input);
+  // user.removeChild(enterButton);
+  // parentnode.removeChild(childnode)
+
 
 
   // player1;
@@ -113,32 +120,93 @@ window.onload = function() {
 
 
 ///////getting player names////////////
+
+var player1 = document.createElement('h3');
+player1.innerText = "Player 1:"
+var p1Name = document.createElement('input');
+var p1NameSubmit = document.createElement('input');
+
+p1Name.setAttribute('type', 'text');
+p1NameSubmit.setAttribute('type', 'submit');
+var p1Div = document.querySelector('.p1Naming');
+p1Div.appendChild(player1);
+p1Div.appendChild(p1Name);
+p1Div.appendChild(p1NameSubmit);
+
+// if (p1Name.value > 1) {
+p1NameSubmit.addEventListener('click', function() {
+  p1Name.style.visibility = 'hidden';
+  p1NameSubmit.style.visibility = 'hidden';
+  player1.style.visibility = 'hidden';
+  var p1NameContent = p1Name.value;
+  var displayP1Name = document.createElement('h3');
+  displayP1Name.innerText = p1NameContent;
+  p1Div.appendChild(displayP1Name);
+});
+
+
+var player2 = document.createElement('h3');
+player2.innerText = "Player 2:"
+var p2Name = document.createElement('input');
+var p2NameSubmit = document.createElement('input');
+
+p2Name.setAttribute('type', 'text');
+p2NameSubmit.setAttribute('type', 'submit');
+var p2Div = document.querySelector('.p2Naming');
+p2Div.appendChild(player2);
+p2Div.appendChild(p2Name);
+p2Div.appendChild(p2NameSubmit);
+
+// if (p2Name.value > 1) {
+p2NameSubmit.addEventListener('click', function() {
+  p2Name.style.visibility = 'hidden';
+  p2NameSubmit.style.visibility = 'hidden';
+  player2.style.visibility = 'hidden';
+  var p2NameContent = p2Name.value;
+  var displayP2Name = document.createElement('h3');
+  displayP2Name.innerText = p2NameContent;
+  p2Div.appendChild(displayP2Name);
+});
+
+
+
+
+
 // charButton.addEventListener('click', function() {
-var name1 = document.querySelector('.P1N');
-var newName1 = document.createElement ('input');
-newName1.type = 'text';
-name1.appendChild(newName1);
+// var name1 = document.querySelector('.P1N');
+// var newName1 = document.createElement ('input');
+// newName1.type = 'text';
+// newName1.value = "Enter your name...";
+// name1.appendChild(newName1);
 // newName1.setAttribute('name', 'username');
 // newName1.setAttribute('value', 'default');
-var getName1 = newName1.value;
+// var getName1 = newName1.value;
 // });
 
 // var getName1 = prompt("Enter Player 1:");
 //after name is input:
-newName1.addEventListener('onkeypress', function() {
-  newName1.style.visibility = 'hidden';
-  name1.innerHTML = ("Hands ready, " + getName1 + "!");
-})
+// newName1.addEventListener('keypress', function() {
+//   if (key === 13) {
+//   name1.removeChild(newName1);
+//   var getName1 = newName1.value;
+//   newName1.style.visibility = 'hidden';
+//   name1.innerHTML = ("Hands ready, " + getName1 + "!");
+// } else {
+//     newName1.style.visibility = 'hidden';
+// };
+// });
 
 
-
-var name2 = document.querySelector('.P2N');
+//
+// var name2 = document.querySelector('.P2N');
 // var getName2 = prompt("Enter Player 2:");
-name2.innerHTML = ("Hands steady, " + getName2 + "!");
+// name2.innerHTML = ("Hands steady, " + getName2 + "!");
 
 // alert("Ready...");
 // alert("FIGHT!!!!!!");
 ///////////////////////////////////////
+
+
 
 var player1LAPress = false;
 var player1MAPress = false;
@@ -183,12 +251,16 @@ var player2HAPress = false;
 //Grab attack buttons & do stuff
 var player1LA = document.querySelector('.lightAttackP1'); //player1LA => player 1 light attack (higher hit chance)
 var player2LA = document.querySelector('.lightAttackP2');
+var player1MA = document.querySelector('.medAttackP1'); //MA = medium attack (avg hit chance)
+var player2MA = document.querySelector('.medAttackP2');
+var player1HA = document.querySelector('.strongAttackP1'); //heavy attack (has lower chance in dice roll. if roll less than certain value it misses)
+var player2HA = document.querySelector('.strongAttackP2');
 
 
+disableP2Buttons();
 
 /////////////LIGHT ATTACKS ///////////////////////
-var player1LA = document.querySelector('.lightAttackP1'); //player1LA => player 1 light attack (higher hit chance)
-var player2LA = document.querySelector('.lightAttackP2');
+
 
 ////////////////////P1 LIGHT ATTACK///////////////////////
 player1LA.addEventListener('click', function() {
@@ -280,8 +352,7 @@ player2LA.addEventListener('click', function() {
 
 ///////NORMAL ATTACKS ///////////////////
 
-var player1MA = document.querySelector('.medAttackP1'); //MA = medium attack (avg hit chance)
-var player2MA = document.querySelector('.medAttackP2');
+
 
 ////////////////////////P1 NORMAL ATTACK////////////////////
 player1MA.addEventListener('click', function() {
@@ -366,8 +437,7 @@ player2MA.addEventListener('click', function() {
 
 
 //////////////////STRONG ATTACKS //////////////////////
-var player1HA = document.querySelector('.strongAttackP1'); //heavy attack (has lower chance in dice roll. if roll less than certain value it misses)
-var player2HA = document.querySelector('.strongAttackP2');
+
 
 /////////////////P1 STRONG ATTACK////////////////////
 player1HA.addEventListener('click', function() {
