@@ -44,6 +44,18 @@
 //3. moving reset game button to top center of screen
 //4.
 
+
+///Things to add:
+//1.character select screen
+//2. title screen
+//3. background music
+//4. mega slap attack- after 3 hits, or after get hit 3 times
+//5. fonts- grab google fonts main link, put in top of css, then
+//choose font style like normal for specific tag/class etc.
+
+
+
+
 /////ONCE EVERYTHING WORKS: MAKE YOUR CODE NEAT WITH INDENTS, etc.////
 
 
@@ -57,6 +69,7 @@
 //add presidential candidates?
 
 window.onload = function() {
+
 
 
   // player1;

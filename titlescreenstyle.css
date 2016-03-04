@@ -1,0 +1,16 @@
+body {
+  background-image: url(https://media.giphy.com/media/3rgXBF2ReXLuUpqPeg/giphy.gif);
+}
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+button {
+  display: block;
+  position: relative;
+  left: 45%;
+  width: 150px;
+  height: 50px;
+}
