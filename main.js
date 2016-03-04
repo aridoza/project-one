@@ -47,11 +47,15 @@
 
 ///Things to add:
 //1.character select screen
-//2. title screen
+//2. title screen DONE
 //3. background music
 //4. mega slap attack- after 3 hits, or after get hit 3 times
 //5. fonts- grab google fonts main link, put in top of css, then
 //choose font style like normal for specific tag/class etc.
+//6. add input box type text, then grab its .value and it equals the
+//inner text of something next to the name
+//7. have input textbox, now make it so that text entered (.value of box)
+//gets added as name of player (like how prompt was working) 
 
 
 
@@ -69,6 +73,26 @@
 //add presidential candidates?
 
 window.onload = function() {
+
+  var titleScreen = document.querySelector('.titleScreen');
+  var charSelectScreen = document.querySelector('.characterSelectScreen');
+  var mainGameScreen = document.querySelector('.container');
+
+  var titleButton = document.querySelector('.titleButton');
+  var charButton = document.querySelector('.charButton');
+
+  mainGameScreen.style.visibility = 'hidden';
+  charSelectScreen.style.visibility = 'hidden';
+
+  titleButton.addEventListener('click', function() {
+    titleScreen.style.visibility = 'hidden';
+    charSelectScreen.style.visibility = 'visible';
+  });
+
+  charButton.addEventListener('click', function() {
+    mainGameScreen.style.visibility = 'visible';
+    charSelectScreen.style.visibility = 'hidden';
+  });
 
 
 
@@ -88,17 +112,32 @@ window.onload = function() {
   healthbar2 = document.querySelector('.healthbarP2');
 
 
-///////getting player name////////////
+///////getting player names////////////
+// charButton.addEventListener('click', function() {
 var name1 = document.querySelector('.P1N');
-var getName1 = prompt("Enter Player 1:");
-name1.innerHTML = ("Hands ready, " + getName1 + "!");
+var newName1 = document.createElement ('input');
+newName1.type = 'text';
+name1.appendChild(newName1);
+// newName1.setAttribute('name', 'username');
+// newName1.setAttribute('value', 'default');
+var getName1 = newName1.value;
+// });
+
+// var getName1 = prompt("Enter Player 1:");
+//after name is input:
+newName1.addEventListener('onkeypress', function() {
+  newName1.style.visibility = 'hidden';
+  name1.innerHTML = ("Hands ready, " + getName1 + "!");
+})
+
+
 
 var name2 = document.querySelector('.P2N');
-var getName2 = prompt("Enter Player 2:");
+// var getName2 = prompt("Enter Player 2:");
 name2.innerHTML = ("Hands steady, " + getName2 + "!");
 
-alert("Ready...");
-alert("FIGHT!!!!!!");
+// alert("Ready...");
+// alert("FIGHT!!!!!!");
 ///////////////////////////////////////
 
 var player1LAPress = false;

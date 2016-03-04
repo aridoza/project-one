@@ -3,9 +3,48 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Poppins:400,600' rel='stylesheet' type='text/css'>
     <title>Slap Attack!</title>
   </head>
   <body>
+
+<!-- Title Screen container -->
+    <div class="titleScreen">
+      <h1 class="titleScreen">!!SLAP ATTACK!!</h1>
+      <button type="button" name="button" class="titleButton">PLAY</button>
+    </div>
+<!-- END Title screen container -->
+
+
+<!-- Character select container -->
+    <div class="characterSelectScreen">
+            <div class="goToGame">
+              <button type="button" name="button" class="charButton">Game Start</button>
+              <!-- hide, then after both characters chosen display button -->
+              <!-- to start game -->
+            </div>
+
+      <div class="P1Characters">
+
+
+          <div class="p1Change">
+            <button>PREV</button>
+            <button class="p1Next">NEXT</button>
+          </div>
+
+      </div>
+
+      <div class="P2Characters">
+
+
+          <div class="p2Change">
+            <button>PREV</button>
+            <button class="p2Next">NEXT</button>
+          </div>
+      </div>
+    </div>
+<!-- END character select container -->
+
 
     <div class="container">
 
@@ -18,7 +57,7 @@
       </div>
 
       <div class="player1Title">
-        <h3 class="P1N">Player 1</h3>
+        <h3>Player 1<div class="P1N"></div></h3>
         <div class="player1Image">
             <img src="https://media.giphy.com/media/soOVcuMDExGrS/giphy.gif" alt="" height="340px" width="400px"/>
             <button type="button" name="button" class="lightAttackP1">L</button>

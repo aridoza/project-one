@@ -6,6 +6,29 @@ var healthCounter;
 
 window.onload = function() {
 
+var titleScreen = document.querySelector('.titleScreen');
+var charSelectScreen = document.querySelector('.characterSelectScreen');
+var mainGameScreen = document.querySelector('.gameScreen');
+var titleButton = document.querySelector('.titleButton');
+var charButton = document.querySelector('.charButton');
+
+
+mainGameScreen.style.visibility = 'hidden';
+charSelectScreen.style.visibility = 'hidden';
+
+titleButton.addEventListener('click', function() {
+  titleScreen.style.visibility = 'hidden';
+  charSelectScreen.style.visibility = 'visible';
+});
+
+charButton.addEventListener('click', function() {
+  mainGameScreen.style.visibility = 'visible';
+  charSelectScreen.style.visibility = 'hidden';
+});
+
+
+
+
 var button1 = document.querySelector('.Haha');
 var button2 = document.querySelector('.Baba');
 var button3 = document.querySelector('.Jaja');
