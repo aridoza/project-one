@@ -77,23 +77,123 @@ window.onload = function() {
 
   var titleScreen = document.querySelector('.titleScreen');
   var charSelectScreen = document.querySelector('.characterSelectScreen');
+  var readyScreen = document.querySelector('.readyScreen');
+  var slapScreen = document.querySelector('.slapScreen')
   var mainGameScreen = document.querySelector('.container');
+
 
   var titleButton = document.querySelector('.titleButton');
   var charButton = document.querySelector('.charButton');
 
+  readyScreen.style.visibility = 'hidden';
+  slapScreen.style.visibility = 'hidden';
   mainGameScreen.style.visibility = 'hidden';
   charSelectScreen.style.visibility = 'hidden';
+  // charButton.style.visibility = 'hidden';
 
   titleButton.addEventListener('click', function() {
     titleScreen.style.visibility = 'hidden';
     charSelectScreen.style.visibility = 'visible';
   });
 
-  charButton.addEventListener('click', function() {
-    mainGameScreen.style.visibility = 'visible';
-    charSelectScreen.style.visibility = 'hidden';
+
+
+////background music/////
+var audio = new Audio('');
+audio.play();
+
+
+
+
+
+  /////HAVE PLAYERS ENTER NAME AT CHAR SELECT/////
+  ///////getting player names////////////
+
+  var p1NameSubmitClick;
+  var p2NameSubmitClick;
+
+
+  var player1 = document.createElement('h3');
+  player1.innerText = "Player 1:"
+  var p1Name = document.createElement('input');
+  var p1NameSubmit = document.createElement('input');
+
+  p1Name.setAttribute('type', 'text');
+  p1NameSubmit.setAttribute('type', 'submit');
+  var p1Div = document.querySelector('.p1Naming');
+  p1Div.appendChild(player1);
+  p1Div.appendChild(p1Name);
+  p1Div.appendChild(p1NameSubmit);
+
+  // if (p1Name.value > 1) {
+  p1NameSubmit.addEventListener('click', function() {
+      p1NameSubmitClick = true;
+    p1Name.style.visibility = 'hidden';
+    p1NameSubmit.style.visibility = 'hidden';
+    player1.style.visibility = 'hidden';
+    var p1GameName = document.querySelector('.P1N');
+    var p1NameContent = p1Name.value;
+    var displayP1Name = document.createElement('h3');
+    displayP1Name.innerText = p1NameContent;
+    p1GameName.appendChild(displayP1Name);
   });
+
+
+  var player2 = document.createElement('h3');
+  player2.innerText = "Player 2:"
+  var p2Name = document.createElement('input');
+  var p2NameSubmit = document.createElement('input');
+
+  p2Name.setAttribute('type', 'text');
+  p2NameSubmit.setAttribute('type', 'submit');
+  var p2Div = document.querySelector('.p2Naming');
+  p2Div.appendChild(player2);
+  p2Div.appendChild(p2Name);
+  p2Div.appendChild(p2NameSubmit);
+
+  // if (p2Name.value > 1) {
+  p2NameSubmit.addEventListener('click', function() {
+      p2NameSubmitClick = true;
+    p2Name.style.visibility = 'hidden';
+    p2NameSubmit.style.visibility = 'hidden';
+    player2.style.visibility = 'hidden';
+    var p2GameName = document.querySelector('.P2N');
+    var p2NameContent = p2Name.value;
+    var displayP2Name = document.createElement('h3');
+    displayP2Name.innerText = p2NameContent;
+    p2GameName.appendChild(displayP2Name);
+
+  });
+
+//3 more screens, name input, READY, SLAP!!!, (then main Game)///
+
+// var toggleCharButton = charButton.style.visibility = 'visible';
+
+// if(player1.style.visibility == 'hidden' && player2.style.visibility == 'hidden'){
+//   charButton.style.visibility = 'visible';
+//   console.log("correctly reading name submissions");
+// }
+
+
+
+var changeToReady = charButton.addEventListener('click', function() {
+  readyScreen.style.visibility = 'visible';
+  charSelectScreen.style.visibility = 'hidden';
+  console.log("correctly reading name submissions")
+});
+
+ readyScreen.addEventListener('click', function() {
+   readyScreen.style.visibility = 'hidden';
+   slapScreen.style.visibility = 'visible';
+   var audio = new Audio('http://soundbible.com/grab.php?id=995&type=mp3');
+   audio.play();
+ });
+
+ slapScreen.addEventListener('click', function() {
+   slapScreen.style.visibility = 'hidden';
+   mainGameScreen.style.visibility = 'visible';
+ })
+
 
 //remove container of content after button click:
   // middle.removeChild(enterName);
@@ -119,57 +219,13 @@ window.onload = function() {
   healthbar2 = document.querySelector('.healthbarP2');
 
 
-///////getting player names////////////
-
-var player1 = document.createElement('h3');
-player1.innerText = "Player 1:"
-var p1Name = document.createElement('input');
-var p1NameSubmit = document.createElement('input');
-
-p1Name.setAttribute('type', 'text');
-p1NameSubmit.setAttribute('type', 'submit');
-var p1Div = document.querySelector('.p1Naming');
-p1Div.appendChild(player1);
-p1Div.appendChild(p1Name);
-p1Div.appendChild(p1NameSubmit);
-
-// if (p1Name.value > 1) {
-p1NameSubmit.addEventListener('click', function() {
-  p1Name.style.visibility = 'hidden';
-  p1NameSubmit.style.visibility = 'hidden';
-  player1.style.visibility = 'hidden';
-  var p1NameContent = p1Name.value;
-  var displayP1Name = document.createElement('h3');
-  displayP1Name.innerText = p1NameContent;
-  p1Div.appendChild(displayP1Name);
-});
-
-
-var player2 = document.createElement('h3');
-player2.innerText = "Player 2:"
-var p2Name = document.createElement('input');
-var p2NameSubmit = document.createElement('input');
-
-p2Name.setAttribute('type', 'text');
-p2NameSubmit.setAttribute('type', 'submit');
-var p2Div = document.querySelector('.p2Naming');
-p2Div.appendChild(player2);
-p2Div.appendChild(p2Name);
-p2Div.appendChild(p2NameSubmit);
-
-// if (p2Name.value > 1) {
-p2NameSubmit.addEventListener('click', function() {
-  p2Name.style.visibility = 'hidden';
-  p2NameSubmit.style.visibility = 'hidden';
-  player2.style.visibility = 'hidden';
-  var p2NameContent = p2Name.value;
-  var displayP2Name = document.createElement('h3');
-  displayP2Name.innerText = p2NameContent;
-  p2Div.appendChild(displayP2Name);
-});
 
 
 
+///add name inputs on separate screen, then make 2 more containers
+//that just show READY.....
+//then SLAP!!!
+//THEN pull up main game window
 
 
 // charButton.addEventListener('click', function() {
@@ -321,6 +377,38 @@ player2LA.addEventListener('click', function() {
   if (diceValue <= 0.90) {
     var audio = new Audio('http://soundbible.com/grab.php?id=2047&type=mp3');
     audio.play();
+    // var hurtP1Image = function() {
+    //
+      // var hurtImage1 = document.querySelector('.p1Img');
+      // hurtImage1.src = "http://orig07.deviantart.net/893c/f/2011/228/7/5/injured_kirby_without_blood_by_xxkaijuking91xx-d46qlwk.png";
+      // var hurtImageA = function(){
+      //   var hurtImage1 = document.querySelector('.p1Img');
+      //   hurtImage1.src = "http://orig07.deviantart.net/893c/f/2011/228/7/5/injured_kirby_without_blood_by_xxkaijuking91xx-d46qlwk.png";
+      // };setTimeout ("hurtImageA()", 2000);
+
+
+      function switchImage(pic) {
+        var pic = document.querySelector('.p1Img');
+        pic.src = "http://orig07.deviantart.net/893c/f/2011/228/7/5/injured_kirby_without_blood_by_xxkaijuking91xx-d46qlwk.png";
+      }
+      function damageSwitch(pic) {
+        var timer = setTimeout("switchImage(pic)", 2000);
+      }
+      
+
+
+
+      // var oldImg = document.querySelector('.p1Img');
+      // oldImg.replaceChild(oldImg, hurtImageA);
+
+      // var hurtChange1 = setTimeout("hurtP1Image()", 2000);
+      // return hurtChange1;
+
+      // var hurtImageB = document.querySelector('.p1Img');
+      // hurtImageB.src = "https://media.giphy.com/media/soOVcuMDExGrS/giphy.gif";
+    // hurtP1Image;
+    // hurtP1Image;
+
     Player1Health = Player1Health - 5;
     health1.innerText = Player1Health;
   } else {
@@ -519,6 +607,10 @@ player2HA.addEventListener('click', function() {
     });
 });
 
+var gameOverMessage = function() {
+  health1.innerText = "You cant HANDLE the slaps!";
+
+}
 
 //Diceroll function
 // var diceValue;

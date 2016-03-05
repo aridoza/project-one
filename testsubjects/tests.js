@@ -305,6 +305,9 @@ button4.addEventListener('click', function() {
   if (diceValue <= 0.90) {
     var audio = new Audio('http://soundbible.com/grab.php?id=2047&type=mp3');
     audio.play();
+    var hurtP1Image = document.querySelector('p1Img');
+    hurtP1Image.innerHTML = ('http://orig07.deviantart.net/893c/f/2011/228/7/5/injured_kirby_without_blood_by_xxkaijuking91xx-d46qlwk.png');
+    hurtP1Image.innerHTML = ('https://media.giphy.com/media/soOVcuMDExGrS/giphy.gif');
 
     health1Counter = health1Counter - 5;
     health1.innerText = health1Counter;
