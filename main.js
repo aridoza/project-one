@@ -58,12 +58,22 @@
 //gets added as name of player (like how prompt was working)
 
 
+//grab div class Reset - create reset button & hide it, make appear after
+//either players health reaches zero
+//INSTEAD of under health, feels/looks wonky
+
+
+
 
 
 /////ONCE EVERYTHING WORKS: MAKE YOUR CODE NEAT WITH INDENTS, etc.////
 
 
 window.onload = function() {
+
+  ////background music/////
+  var audioMain = new Audio('https://soundcloud.com/ari-doza/slap-attack-theme-v1');
+  audioMain.play();
 
 
 ////GET PLAYER NAMES//////
@@ -80,6 +90,11 @@ window.onload = function() {
   var readyScreen = document.querySelector('.readyScreen');
   var slapScreen = document.querySelector('.slapScreen')
   var mainGameScreen = document.querySelector('.container');
+  var wowYouWinScreen = document.querySelector('.wowYouWin');
+  var restartButton = document.querySelector('.restartButton');
+
+  restartButton.style.visibility = 'hidden';
+  wowYouWinScreen.style.visibility = 'hidden';
 
 
   var titleButton = document.querySelector('.titleButton');
@@ -98,9 +113,7 @@ window.onload = function() {
 
 
 
-////background music/////
-var audio = new Audio('');
-audio.play();
+
 
 
 
@@ -394,7 +407,7 @@ player2LA.addEventListener('click', function() {
       function damageSwitch(pic) {
         var timer = setTimeout("switchImage(pic)", 2000);
       }
-      
+
 
 
 

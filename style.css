@@ -208,3 +208,55 @@ h1 {
   display: block;
   bottom: 100px;
 }
+
+.p1Img {
+  border: 5px solid black;
+  border-radius: 75px;
+  bottom: 100px;
+}
+
+.p2Img {
+  border: 5px solid black;
+  border-radius: 75px;
+  bottom: 100px;
+}
+
+.lightAttackP1, .medAttackP1, .strongAttackP1 {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+}
+
+.lightAttackP2, .medAttackP2, .strongAttackP2 {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+}
+
+.lightAttackP1:hover {
+  background: blue;
+}
+
+.medAttackP1:hover {
+  background: gold;
+}
+
+.strongAttackP1:hover {
+  background: red;
+}
+
+.lightAttackP2:hover {
+  background: blue;
+}
+
+.medAttackP2:hover {
+  background: gold;
+}
+
+.strongAttackP2:hover {
+  background: red;
+}
