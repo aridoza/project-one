@@ -368,6 +368,14 @@ player1LA.addEventListener('click', function() {
   var p1WonMsg = document.querySelector('.P1N');
   p1WonMsg.innerText = "MASTER of SLAPS!"
   p2LostMsg.innerText = "You cant HANDLE the slaps!";
+
+  var hurtImage2 = document.querySelector('.p2Img');
+  hurtImage2.src = "http://40.media.tumblr.com/1c4156c5210170458e652ce25c92a6a9/tumblr_inline_ny8vxtzwwV1qdvldn_400.jpg";
+  var hurtImageB = function(){
+    var hurtImage2 = document.querySelector('.p2Img');
+    hurtImage2.src = "http://40.media.tumblr.com/1c4156c5210170458e652ce25c92a6a9/tumblr_inline_ny8vxtzwwV1qdvldn_400.jpg";
+  };setTimeout ("hurtImageB()", 2000);
+
   // var grabReset = document.querySelector('h1');
   // var resetButton = document.createElement('button'); //resetbutton code start
   // resetButton.setAttribute('type', 'button');
@@ -450,6 +458,14 @@ player2LA.addEventListener('click', function() {
   var p2WonMsg = document.querySelector('.P2N');
   p2WonMsg.innerText = "MASTER of SLAPS!"
   p1LostMsg.innerText = "You cant HANDLE the slaps!";
+
+  var hurtImage1 = document.querySelector('.p1Img');
+  hurtImage1.src = "http://orig07.deviantart.net/893c/f/2011/228/7/5/injured_kirby_without_blood_by_xxkaijuking91xx-d46qlwk.png";
+  var hurtImageA = function(){
+    var hurtImage1 = document.querySelector('.p1Img');
+    hurtImage1.src = "http://orig07.deviantart.net/893c/f/2011/228/7/5/injured_kirby_without_blood_by_xxkaijuking91xx-d46qlwk.png";
+  };setTimeout ("hurtImageA()", 2000);
+
   var resetButton = document.querySelector('.restartButton'); //resetbutton code start
   resetButton.innerText = 'New Slapfest?'
   resetButton.addEventListener('click', function() {
@@ -500,6 +516,14 @@ player1MA.addEventListener('click', function() {
   var p1WonMsg = document.querySelector('.P1N');
   p1WonMsg.innerText = "MASTER of SLAPS!"
   p2LostMsg.innerText = "You cant HANDLE the slaps!";
+
+  var hurtImage2 = document.querySelector('.p2Img');
+  hurtImage2.src = "http://40.media.tumblr.com/1c4156c5210170458e652ce25c92a6a9/tumblr_inline_ny8vxtzwwV1qdvldn_400.jpg";
+  var hurtImageB = function(){
+    var hurtImage2 = document.querySelector('.p2Img');
+    hurtImage2.src = "http://40.media.tumblr.com/1c4156c5210170458e652ce25c92a6a9/tumblr_inline_ny8vxtzwwV1qdvldn_400.jpg";
+  };setTimeout ("hurtImageB()", 2000);
+
   var resetButton = document.querySelector('.restartButton'); //resetbutton code start
   resetButton.innerText = 'New Slapfest?'
   // var resetButton = document.createElement('button'); //resetbutton code start
@@ -546,6 +570,14 @@ player2MA.addEventListener('click', function() {
   var p2WonMsg = document.querySelector('.P2N');
   p2WonMsg.innerText = "MASTER of SLAPS!"
   p1LostMsg.innerText = "You cant HANDLE the slaps!";
+
+  var hurtImage1 = document.querySelector('.p1Img');
+  hurtImage1.src = "http://orig07.deviantart.net/893c/f/2011/228/7/5/injured_kirby_without_blood_by_xxkaijuking91xx-d46qlwk.png";
+  var hurtImageA = function(){
+    var hurtImage1 = document.querySelector('.p1Img');
+    hurtImage1.src = "http://orig07.deviantart.net/893c/f/2011/228/7/5/injured_kirby_without_blood_by_xxkaijuking91xx-d46qlwk.png";
+  };setTimeout ("hurtImageA()", 2000);
+
   // var resetButton = document.createElement('button'); //resetbutton code start
   // resetButton.setAttribute('type', 'button');
   // resetButton.innerText = 'New Slapfest?'
@@ -599,6 +631,14 @@ player1HA.addEventListener('click', function() {
   var p1WonMsg = document.querySelector('.P1N');
   p1WonMsg.innerText = "MASTER of SLAPS!"
   p2LostMsg.innerText = "You cant HANDLE the slaps!";
+
+  var hurtImage2 = document.querySelector('.p2Img');
+  hurtImage2.src = "http://40.media.tumblr.com/1c4156c5210170458e652ce25c92a6a9/tumblr_inline_ny8vxtzwwV1qdvldn_400.jpg";
+  var hurtImageB = function(){
+    var hurtImage2 = document.querySelector('.p2Img');
+    hurtImage2.src = "http://40.media.tumblr.com/1c4156c5210170458e652ce25c92a6a9/tumblr_inline_ny8vxtzwwV1qdvldn_400.jpg";
+  };setTimeout ("hurtImageB()", 2000);
+  
   // var resetButton = document.createElement('button'); //resetbutton code start
   // resetButton.setAttribute('type', 'button');
   // resetButton.innerText = 'New Slapfest?'
@@ -643,6 +683,14 @@ player2HA.addEventListener('click', function() {
   var p2WonMsg = document.querySelector('.P2N');
   p2WonMsg.innerText = "MASTER of SLAPS!"
   p1LostMsg.innerText = "You cant HANDLE the slaps!";
+
+  var hurtImage1 = document.querySelector('.p1Img');
+  hurtImage1.src = "http://orig07.deviantart.net/893c/f/2011/228/7/5/injured_kirby_without_blood_by_xxkaijuking91xx-d46qlwk.png";
+  var hurtImageA = function(){
+    var hurtImage1 = document.querySelector('.p1Img');
+    hurtImage1.src = "http://orig07.deviantart.net/893c/f/2011/228/7/5/injured_kirby_without_blood_by_xxkaijuking91xx-d46qlwk.png";
+  };setTimeout ("hurtImageA()", 2000);
+
   // var resetButton = document.createElement('button'); //resetbutton code start
   // resetButton.setAttribute('type', 'button');
   var resetButton = document.querySelector('.restartButton');  //resetbutton code start
@@ -656,10 +704,7 @@ player2HA.addEventListener('click', function() {
 
 });
 
-var gameOverMessage = function() {
-  health1.innerText = "You cant HANDLE the slaps!";
 
-}
 
 //Diceroll function
 // var diceValue;
@@ -684,7 +729,7 @@ var gameOverMessage = function() {
 //                  game in future to use less code?
 
 
-
+// hurt kermit= http://40.media.tumblr.com/1c4156c5210170458e652ce25c92a6a9/tumblr_inline_ny8vxtzwwV1qdvldn_400.jpg
 
 
 }; //end of window onload
