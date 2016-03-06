@@ -6,6 +6,7 @@
 
   width: 100%;
   height: 100%;
+  margin: 0;
 
 }
 
@@ -13,6 +14,7 @@
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   text-align: center;
+  margin: 0;
 }
 
 .titleButton {
@@ -24,6 +26,10 @@
   top: 130px;
   left: 46%;
 }
+
+.titleButton:hover {
+  background: orange;
+}
 /*Character Select Screen*/
 .characterSelectScreen {
   display: block;
@@ -31,7 +37,7 @@
   background-color: grey;
   width: 100%;
   height: 100%;
-
+  margin: 0;
 }
 
 .charSelectBackground {
@@ -41,6 +47,10 @@
   height: 150px;
   left: 520px;
   top: 65%;
+}
+
+.charButton:hover {
+  background: purple;
 }
 
 .P1Characters {
@@ -54,7 +64,7 @@
 }
 
 .P2Characters {
-  position: relative;
+  position: absolute;
   display:block;
   width: 500px;
   height: 400px;
@@ -62,6 +72,27 @@
   left: 60%;
   top: 20%;
 }
+
+/*char select images*/
+.charSelectP1 {
+  position:absolute;
+  display: block;
+  width: 495px;
+  height: 395px;
+  border: 5px solid black;
+  right: 220px;
+  bottom: 9px;
+
+}
+.charSelectP2 {
+  position:absolute;
+  display:block;
+  width: 495px;
+  height: 395px;
+  border: 5px solid black;
+  bottom: 0px;
+}
+
 
 .p1Change {
   position: relative;
@@ -224,18 +255,46 @@ h1 {
 .lightAttackP1, .medAttackP1, .strongAttackP1 {
   display: block;
   position: relative;
-  width: 30px;
-  height: 30px;
-  padding: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
 }
 
 .lightAttackP2, .medAttackP2, .strongAttackP2 {
   display: block;
   position: relative;
-  width: 30px;
-  height: 30px;
-  padding: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
 }
+
+.p1Buttons {
+}
+
+.p2Buttons {
+}
+
+.lightAttackP1 {
+
+}
+.medAttackP1 {
+  left: 45px;
+  bottom: 40px;
+}
+.strongAttackP1 {
+  left: 90px;
+  bottom: 80px;
+}
+
+.medAttackP2 {
+  left: 45px;
+  bottom: 40px;
+}
+.strongAttackP2 {
+  left: 90px;
+  bottom: 80px;
+}
+
 
 .lightAttackP1:hover {
   background: blue;
@@ -259,4 +318,24 @@ h1 {
 
 .strongAttackP2:hover {
   background: red;
+}
+
+.wowYouWin {
+  display: block;
+  position:absolute;
+  left: 35%;
+  top: 20%;
+  z-index: 5;
+  width: 500px;
+  height: 500px;
+
+}
+
+.restartButton {
+  display: block;
+  position: absolute;
+  width: 80px;
+  height: 30px;
+  left: 48%;
+  top: 10%;
 }

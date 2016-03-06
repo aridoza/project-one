@@ -72,7 +72,7 @@
 window.onload = function() {
 
   ////background music/////
-  var audioMain = new Audio('https://soundcloud.com/ari-doza/slap-attack-theme-v1');
+  var audioMain = new Audio('/Users/Ari/Desktop/Slap Attack!!!/Slap Attack Theme v1.mp3');
   audioMain.play();
 
 
@@ -96,6 +96,10 @@ window.onload = function() {
   restartButton.style.visibility = 'hidden';
   wowYouWinScreen.style.visibility = 'hidden';
 
+var resetGame = function() {
+  restartButton.style.visibility = 'visible';
+  wowYouWinScreen.style.visibility = 'visible';
+};
 
   var titleButton = document.querySelector('.titleButton');
   var charButton = document.querySelector('.charButton');
@@ -357,18 +361,24 @@ player1LA.addEventListener('click', function() {
     // alert("Miss!")
   }
   if (Player2Health <= 0) { //endgame code, put into other 2 attack buttons
-  alert("Player 1 slapped em silly!");
-  alert("Game over!");
-  health2.innerText = "You cant HANDLE the slaps!";
+  // alert("Player 1 slapped em silly!");
+  // alert("Game over!");
+  resetGame();
+  var p2LostMsg = document.querySelector('.P2N');
+  var p1WonMsg = document.querySelector('.P1N');
+  p1WonMsg.innerText = "MASTER of SLAPS!"
+  p2LostMsg.innerText = "You cant HANDLE the slaps!";
   // var grabReset = document.querySelector('h1');
-  var resetButton = document.createElement('button'); //resetbutton code start
-  resetButton.setAttribute('type', 'button');
-  resetButton.innerText = 'New Slapfest?';
+  // var resetButton = document.createElement('button'); //resetbutton code start
+  // resetButton.setAttribute('type', 'button');
+  // resetButton.innerText = 'New Slapfest?';
+  var resetButton = document.querySelector('.restartButton'); //resetbutton code start
+  resetButton.innerText = 'New Slapfest?'
   resetButton.addEventListener('click', function() {
     window.location.reload(); //found at http://stackoverflow.com/questions/5294842/refresh-a-page-using-javascript-or-html
   })
-  var putButton = document.querySelector('.P2Health');
-  putButton.appendChild(resetButton); //resetButton code ends; remove/recode if something breaks
+  // var putButton = document.querySelector('.P2Health');
+  // putButton.appendChild(resetButton); //resetButton code ends; remove/recode if something breaks
 };
   player1LA.removeEventListener('click', function(){
     });
@@ -432,17 +442,21 @@ player2LA.addEventListener('click', function() {
   if (Player1Health <= 0) { //endgame code, put into other 2 attack buttons
     var audio = new Audio('http://soundbible.com/grab.php?id=2045&type=mp3');
     audio.play();
-  alert("Player 2 slapped em silly!");
-  alert("Game over!");
-  health1.innerText = "You cant HANDLE the slaps";
-  var resetButton = document.createElement('button'); //resetbutton code start
-  resetButton.setAttribute('type', 'button');
+  // alert("Player 2 slapped em silly!");
+  // alert("Game over!");
+  resetGame(); //shows wow image & reset button
+  // health1.innerText = "You cant HANDLE the slaps";
+  var p1LostMsg = document.querySelector('.P1N');
+  var p2WonMsg = document.querySelector('.P2N');
+  p2WonMsg.innerText = "MASTER of SLAPS!"
+  p1LostMsg.innerText = "You cant HANDLE the slaps!";
+  var resetButton = document.querySelector('.restartButton'); //resetbutton code start
   resetButton.innerText = 'New Slapfest?'
   resetButton.addEventListener('click', function() {
     window.location.reload(); //found at http://stackoverflow.com/questions/5294842/refresh-a-page-using-javascript-or-html
   })
-  var putButton = document.querySelector('.P1Health');
-  putButton.appendChild(resetButton); //resetButton code ends; remove/recode if something breaks
+  // var putButton = document.querySelector('.P1Health');
+  // putButton.appendChild(resetButton); //resetButton code ends; remove/recode if something breaks
 };
   player2LA.removeEventListener('click', function(){
     });
@@ -479,17 +493,23 @@ player1MA.addEventListener('click', function() {
     // alert("Miss!")
   }
   if (Player2Health <= 0) { //endgame code, put into other 2 attack buttons
-  alert("Player 1 slapped em silly!");
-  alert("Game over!");
-  health2.innerText = "You cant HANDLE the slaps";
-  var resetButton = document.createElement('button'); //resetbutton code start
-  resetButton.setAttribute('type', 'button');
+  // alert("Player 1 slapped em silly!");
+  // alert("Game over!");
+  resetGame();
+  var p2LostMsg = document.querySelector('.P2N');
+  var p1WonMsg = document.querySelector('.P1N');
+  p1WonMsg.innerText = "MASTER of SLAPS!"
+  p2LostMsg.innerText = "You cant HANDLE the slaps!";
+  var resetButton = document.querySelector('.restartButton'); //resetbutton code start
   resetButton.innerText = 'New Slapfest?'
+  // var resetButton = document.createElement('button'); //resetbutton code start
+  // resetButton.setAttribute('type', 'button');
+  // resetButton.innerText = 'New Slapfest?'
   resetButton.addEventListener('click', function() {
     window.location.reload(); //found at http://stackoverflow.com/questions/5294842/refresh-a-page-using-javascript-or-html
   })
-  var putButton = document.querySelector('.P2Health');
-  putButton.appendChild(resetButton); //resetButton code ends; remove/recode if something breaks
+  // var putButton = document.querySelector('.P2Health');
+  // putButton.appendChild(resetButton); //resetButton code ends; remove/recode if something breaks
 };
   player1MA.removeEventListener('click', function(){
     });
@@ -519,17 +539,23 @@ player2MA.addEventListener('click', function() {
     // alert("Miss!")
   }
   if (Player1Health <= 0) { //endgame code, put into other 2 attack buttons
-  alert("Player 2 slapped em silly!");
-  alert("Game over!");
-  health1.innerText = "You cant HANDLE the slaps";
-  var resetButton = document.createElement('button'); //resetbutton code start
-  resetButton.setAttribute('type', 'button');
+  // alert("Player 2 slapped em silly!");
+  // alert("Game over!");
+  resetGame();
+  var p1LostMsg = document.querySelector('.P1N');
+  var p2WonMsg = document.querySelector('.P2N');
+  p2WonMsg.innerText = "MASTER of SLAPS!"
+  p1LostMsg.innerText = "You cant HANDLE the slaps!";
+  // var resetButton = document.createElement('button'); //resetbutton code start
+  // resetButton.setAttribute('type', 'button');
+  // resetButton.innerText = 'New Slapfest?'
+  var resetButton = document.querySelector('.restartButton'); //resetbutton code start
   resetButton.innerText = 'New Slapfest?'
   resetButton.addEventListener('click', function() {
     window.location.reload(); //found at http://stackoverflow.com/questions/5294842/refresh-a-page-using-javascript-or-html
   })
-  var putButton = document.querySelector('.P1Health');
-  putButton.appendChild(resetButton); //resetButton code ends; remove/recode if something breaks
+  // var putButton = document.querySelector('.P1Health');
+  // putButton.appendChild(resetButton); //resetButton code ends; remove/recode if something breaks
 };
   player2LA.removeEventListener('click', function(){
     });
@@ -564,17 +590,23 @@ player1HA.addEventListener('click', function() {
     // alert("Miss!")
   }
   if (Player2Health <= 0) { //endgame code, put into other 2 attack buttons
-  alert("Player 1 slapped em silly!");
-  alert("Game over!");
-  health2.innerText = "You cant HANDLE the slaps";
-  var resetButton = document.createElement('button'); //resetbutton code start
-  resetButton.setAttribute('type', 'button');
+  // alert("Player 1 slapped em silly!");
+  // alert("Game over!");
+  resetGame();
+  var resetButton = document.querySelector('.restartButton'); //resetbutton code start
   resetButton.innerText = 'New Slapfest?'
+  var p2LostMsg = document.querySelector('.P2N');
+  var p1WonMsg = document.querySelector('.P1N');
+  p1WonMsg.innerText = "MASTER of SLAPS!"
+  p2LostMsg.innerText = "You cant HANDLE the slaps!";
+  // var resetButton = document.createElement('button'); //resetbutton code start
+  // resetButton.setAttribute('type', 'button');
+  // resetButton.innerText = 'New Slapfest?'
   resetButton.addEventListener('click', function() {
     window.location.reload(); //found at http://stackoverflow.com/questions/5294842/refresh-a-page-using-javascript-or-html
   })
-  var putButton = document.querySelector('.P2Health');
-  putButton.appendChild(resetButton); //resetButton code ends; remove/recode if something breaks
+  // var putButton = document.querySelector('.P2Health');
+  // putButton.appendChild(resetButton); //resetButton code ends; remove/recode if something breaks
 };
   player1LA.removeEventListener('click', function(){
     });
@@ -604,20 +636,24 @@ player2HA.addEventListener('click', function() {
     // alert("Miss!")
   }
   if (Player1Health <= 0) { //endgame code, put into other 2 attack buttons
-  alert("Player 2 slapped em silly!");
-  alert("Game over!");
-  health1.innerText = "You cant HANDLE the slaps";
-  var resetButton = document.createElement('button'); //resetbutton code start
-  resetButton.setAttribute('type', 'button');
+  // alert("Player 2 slapped em silly!");
+  // alert("Game over!");
+  resetGame(); //shows wow and reset button
+  var p1LostMsg = document.querySelector('.P1N');
+  var p2WonMsg = document.querySelector('.P2N');
+  p2WonMsg.innerText = "MASTER of SLAPS!"
+  p1LostMsg.innerText = "You cant HANDLE the slaps!";
+  // var resetButton = document.createElement('button'); //resetbutton code start
+  // resetButton.setAttribute('type', 'button');
+  var resetButton = document.querySelector('.restartButton');  //resetbutton code start
   resetButton.innerText = 'New Slapfest?'
   resetButton.addEventListener('click', function() {
     window.location.reload(); //found at http://stackoverflow.com/questions/5294842/refresh-a-page-using-javascript-or-html
   })
-  var putButton = document.querySelector('.P1Health');
-  putButton.appendChild(resetButton); //resetButton code ends; remove/recode if something breaks
+  // var putButton = document.querySelector('.P1Health');
+  // putButton.appendChild(resetButton); //resetButton code ends; remove/recode if something breaks
 };
-  player2LA.removeEventListener('click', function(){
-    });
+
 });
 
 var gameOverMessage = function() {
