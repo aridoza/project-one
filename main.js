@@ -72,7 +72,7 @@
 window.onload = function() {
 
   ////background music/////
-  var audioMain = new Audio('/Users/Ari/Desktop/Slap Attack!!!/Slap Attack Theme v1.mp3');
+  var audioMain = new Audio('Slap Attack Theme v1.mp3');
   audioMain.play();
 
 
@@ -638,7 +638,7 @@ player1HA.addEventListener('click', function() {
     var hurtImage2 = document.querySelector('.p2Img');
     hurtImage2.src = "http://40.media.tumblr.com/1c4156c5210170458e652ce25c92a6a9/tumblr_inline_ny8vxtzwwV1qdvldn_400.jpg";
   };setTimeout ("hurtImageB()", 2000);
-  
+
   // var resetButton = document.createElement('button'); //resetbutton code start
   // resetButton.setAttribute('type', 'button');
   // resetButton.innerText = 'New Slapfest?'
