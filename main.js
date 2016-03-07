@@ -72,7 +72,7 @@
 window.onload = function() {
 
   ////background music/////
-  var audioMain = new Audio('project-one/music/Slap Attack Theme v1.mp3');
+  var audioMain = new Audio('/Users/Ari/project-one/music/Slap Attack Theme v1.mp3');
   audioMain.play();
 
 
